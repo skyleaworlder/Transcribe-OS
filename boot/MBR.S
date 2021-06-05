@@ -31,6 +31,7 @@ SECTION MBR vstart=0x7c00
     mov cx, 1
     call rd_disk_m_16
 
+    jmp LOADER_BASE_ADDR
 
 ;------------------------------------
 ; function: rd_disk_m_16
@@ -71,7 +72,7 @@ rd_disk_m_16:
     nop
     in al, dx
     and al, 0x88
-    cmp al, 0x88
+    cmp al, 0x08
     jnz .not_ready
 
     mov ax, di
