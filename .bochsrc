@@ -8,6 +8,5 @@ boot: disk
 mouse: enabled=0
 keyboard: keymap=/opt/bochs/share/bochs/keymaps/x11-pc-us.map
 
-# ata0: enabled=1, ioaddr1=0x1f0, ioaddr2=0x3f0, irq=14
-ata0-master: type=disk, path="teaching.img", mode=flat
-#, cylinders=20, heads=16, spt=63
+ata0: enabled=1, ioaddr1=0x1f0, ioaddr2=0x3f0, irq=14
+ata0-master: type=disk, path="hd10M-20-16-63.img", mode=flat, cylinders=20, heads=16, spt=63
